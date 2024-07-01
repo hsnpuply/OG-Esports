@@ -15,11 +15,11 @@
             
         <!-- Offical Shop Button -->
          <div class="official-shop">
-            <a href="#" class=" uppercase text-base tracking-[.3rem] text-white py-3 px-2 font-semibold bg-primary_color2 hover:bg-transparent border-2 border-primary_color2">OG OFFICIAL SHOP</a>
+            <a href="#" class=" uppercase text-sm tracking-[.3rem] text-white py-3 px-2 font-semibold bg-primary_color2 hover:bg-transparent border-2 border-primary_color2">OG OFFICIAL SHOP</a>
          </div>
 
          <!-- Hamberger Menu -->
-          <div class="hamberger-menu  flex">
+          <div class="hamberger-menu  flex lg:hidden">
             <button >
           <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 19 19" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>

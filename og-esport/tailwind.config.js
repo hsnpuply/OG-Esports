@@ -5,7 +5,7 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ], theme: {
        container: {
-      padding: '2rem',
+      padding: '1rem',
       center: true
     },
     extend: {

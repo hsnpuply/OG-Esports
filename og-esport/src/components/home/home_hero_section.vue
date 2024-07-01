@@ -8,6 +8,5 @@
 
 </script>
 <style scoped>
-img{
-}
+
 </style>
