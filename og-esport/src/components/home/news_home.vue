@@ -1,10 +1,10 @@
 <template>
   <div class=" px-8  ">
     <h3 class="text-white text-2xl tracking-wider my-6 hover:text-white/90 "><a href="#">News</a></h3>
-    <div class="flex flex-wrap gap-8 items-center justify-center">
+    <div class="flex flex-wrap  gap-1 items-center justify-center">
       <div v-for="(item, index) in news_imgs" :key="index" class="flex flex-col items-center">
-          <a href="#" class="relative">
-        <img :src="item.image"  alt="" class="">
+          <a href="#" class="relative" >
+        <img :src="item.image"  alt="" class="w-96 h-72 object-cover select-none rounded-lg">
             <div class="news-info absolute left-3 bottom-6 text-white">
                   <span class="uppercase text-xs tracking-widest bg-primary_color2 py-[.1rem] rounded-lg  px-3">{{ item.tag }}</span>
                   <h4 class=" text-sm font-semibold uppercase">{{ item.title }}</h4>
@@ -73,10 +73,10 @@ const news_imgs = ref([
 </script>
 
 <style scoped>
-img {
+/* img {
   width: 380px;
   height: 220px;
   border-radius: 10px;
   object-fit: cover;
-}
+} */
 </style>

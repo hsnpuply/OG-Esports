@@ -20,7 +20,8 @@ export default {
         'primary_background': '#0f1119',
         'badge_bg': '#0f1119',
         'navbar_bg': '#1b1e24',
-        'primary_color2':'#dcbc78'
+        'primary_color2': '#dcbc78',
+        'footer_color':'#151621'
       },
     },
   },

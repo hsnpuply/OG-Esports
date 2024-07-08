@@ -3,6 +3,7 @@
         <Partners/>
         <News_home/>
         <Shop_home />
+        <Story_home />
   </div>
 </template>
 
@@ -10,4 +11,5 @@
 import Partners from '../home/partners.vue'
 import News_home from '../home/news_home.vue'
 import Shop_home from '../home/shop_home.vue'
+import Story_home from '../home/story_home.vue'
 </script>
