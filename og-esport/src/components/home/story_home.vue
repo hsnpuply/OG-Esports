@@ -1,19 +1,23 @@
 <template>
-  <div class="container">
-    <h3 class="text-white text-2xl tracking-widest my-6 hover:text-white/90"><a href="#">Our Story</a></h3>
+  <div class="xl:container px-4 sm:px-6 md:px-8 lg:px-12 ">
+    <h3 class="text-white text-2xl tracking-widest my-6 hover:text-white/90 "><a href="#">Our Story</a></h3>
 
       <swiper
     slides-per-view="1"
+    :breakpoints="{ 450:{ slidesPerView:1 }, 720:{slidesPerView:2}, 1025:{ slidesPerView:3, } }"
     space-between="20"
     loop="true"
+    Autoplay
+   
+    
 
   >
-    <swiper-slide class="group"
+    <swiper-slide class="group" 
         v-for="(vid,index) in storys" :key="index"
 >
 <a :href="vid.link">
-          <img :src="vid.img" alt="" class="group-hover:grayscale-[45%] duration-500 ease-in">
-         <span class=" group/hsn px-4 py-2 text-center bg-primary_color2 rounded-full absolute right-4 bottom-5 hover:scale-[1.4] duration-[400ms] ease-out shadow-sm shadow-black group-hover:shadow-lg ">
+          <img :src="vid.img" alt="" class="story-home-pic grayscale-[50%]  ease-in group-hover:grayscale-0   w-full  border-transparent  border-2 hover:border-primary_color2  ">
+         <span class=" group/hsn px-4 py-2 text-center bg-primary_color2 rounded-full absolute right-4 bottom-5 hover:scale-[1.4]  ease-out shadow-sm shadow-black group-hover:shadow-lg ">
           <svg class="group-hover/hsn:fill-white group-hover/hsn:w-[17px] group-hover/hsn:h-[28px] duration-300 ease-out hover:stroke-width-5" xmlns="http://www.w3.org/2000/svg" width="16" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="arcs">
             <polygon points="5 3 19 12 5 21 5 3"></polygon>
           </svg>
@@ -87,9 +91,10 @@ const storys = ref([
 import { ref } from 'vue'
 </script>
 <style scoped>
-img{
-  width: 400px;
-  height: 220px;
+.story-home-pic{
+  transition: border .32s ease-in-out;
+
 }
+
 
 </style>

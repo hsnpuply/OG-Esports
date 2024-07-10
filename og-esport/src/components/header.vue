@@ -1,46 +1,39 @@
 <template>
 
     <header class="px-2  font-titilium text-4xl text-center 
-       lg:bg-transparent lg:hover:bg-navbar_bg duration-200 ease-in relative 
-    z-20
-    ">
-    <!-- Commented top nav -->
-     <!-- <div class="top-nav  flex items-center gap-4 justify-between container py-1 ">
+       bg-navbar_bg duration-300 ease-in
+        relative  bg-bg-top-navbar sm:bg-none  sm:hover:bg-navbar_bg
+        sm:fixed sm:top-0 sm:left-0 sm:w-full
+        lg:py-3
+    z-20 
+   
+    " ref="headerx" >
+     <div class="top-nav flex  items-end justify-between py-2 px-2  md:px-10 lg:container">
+       <div class="left-side md:flex md:items-center md:gap-4">
+        <!-- Logo -->
         <div class="logo ">
             <a href="#">
-            <img :src="logoPic" alt="" class=" max-w-[42px] absolute top-[10px] ">
-
+            <img :src="logoPic" alt="" class=" max-w-[44px] absolute top-[9px] md:static   left-14">
             </a>
         </div>
 
-
-        <div class="right-side flex items-end gap-4  ">
-            
-         <div class="official-shop">
-            <a href="#" class=" uppercase text-sm tracking-[.22rem]
-             text-white   font-semibold bg-primary_color2 p-[.5rem]
-              hover:bg-transparent border-2 border-primary_color2">
-              OG OFFICIAL SHOP</a>
+        <!-- Desktop Main Menu -->
+         <div class="main-menu hidden lg:block ">
+              <nav >
+  <ul class="uppercase tracking-wider flex items-center text-xs gap-7 justify-center w-full py-4 text-white ">
+<li class="w-full relative   text-center max-w-64 bg-red-900"><a href="#" class="">Home</a></li>
+<li class="w-full relative   text-center max-w-64 bg-red-900"><a href="#" class="">News</a></li>
+<li class="w-full relative   text-center max-w-64 bg-red-900"><a href="#" class="">Teams</a></li>
+<li class="w-full relative   text-center max-w-64 bg-red-900"><a href="#" class="">About</a></li>
+<li class="w-full relative   text-center max-w-64 bg-red-900"><a href="#" class="">Partners</a></li>
+<li class="w-full relative   text-center max-w-64 bg-red-900"><a href="#" class="">Contact us</a></li>
+  </ul>
+</nav>
          </div>
-
-          <div class="hamberger-menu  flex items-center justify-center h-full  "@click="toggleMenu()"  ref="hamberger_menu_icon">
-            <button class="text-center " >
-              ☰
-            </button>
-          </div>
-        </div>
-     </div>
- -->
-     <div class="top-nav flex  items-end justify-between py-2 px-2">
-       <div class="logo ">
-            <a href="#">
-            <img :src="logoPic" alt="" class=" max-w-[44px] absolute top-[9px]  left-8">
-
-            </a>
-        </div>
+       </div>
 
 
-        <div class="right-side flex items-center gap-4  ">
+        <div class="right-side flex items-center gap-5 ">
             
          <div class="official-shop flex items-center relative">
             <a href="#" class=" uppercase text-sm
@@ -49,7 +42,7 @@
               OG OFFICIAL SHOP</a>
          </div>
 
-          <div class="hamberger-menu  flex items-center  text-xl  px-2 py-1  text-white  "@click="toggleMenu()"  ref="hamberger_menu_icon">
+          <div class="lg:hidden hamberger-menu    flex items-center  text-xl  px-2 py-1  text-white  "@click="toggleMenu()"  ref="hamberger_menu_icon">
             <button class="" >
               ☰
                <!-- X -->
@@ -59,7 +52,8 @@
      </div>
 
     </header>
-    <div class="hamberger-menu-list  absolute top-19 w-full text-white text-xs bg-red-800" v-if="menu_active">
+    <!-- HamberGerMenu Mobile -->
+    <div class="hamberger-menu-list  z-[1000]  fixed top-[75px]  lg:hidden w-full text-white text-xs bg-hamberger-menu pt-3 sm:pt-8 md:pt-8" v-if="menu_active">
 <nav>
   <ul class="uppercase tracking-wider flex items-center flex-col gap-7 justify-center w-full py-4">
 <li class="w-full relative   text-center"><a href="#" class="">Home</a></li>
@@ -75,7 +69,7 @@
 </template>
 
 <script setup>
-import {ref } from 'vue'
+import {onMounted, ref } from 'vue'
 import logoPic from '../assets/img/og_logo_2020.png'
 const menu_active = ref(false);
 const hamberger_menu_icon = ref(null)
@@ -83,19 +77,39 @@ const hamberger_menu_icon = ref(null)
 const toggleMenu = () => {
   menu_active.value = !menu_active.value
   hamberger_menu_icon.value.classList.toggle('bg-primary_color2')
+  headerx.value.classList.remove('transparented')
+
 }
 
+const headerx = ref('')
+
+const dostuff = () => {
+  if (menu_active.value === false) {
+    if (window.scrollY === 0) {
+      headerx.value.classList.add('transparented')
+
+    }
+
+    if (window.scrollY > 90) {
+      headerx.value.classList.remove('transparented')
+      
+    }
+  }
+}
+
+onMounted(() => {
+  dostuff()
+  window.addEventListener('scroll', dostuff)
+})
 
 
 </script>
 
 <style scoped>
-header{
-  background: linear-gradient(270deg,#191e2b 0,#333b54 52.08%,#141822 100%),#191e2b;
-}
 
-.hamberger-menu-list{
-  background:linear-gradient(270deg,#23293b 0,#333b54 52.08%,#23293b 100%),#23293b
+
+.transparented{
+  background-color: transparent;
 }
 
 li{

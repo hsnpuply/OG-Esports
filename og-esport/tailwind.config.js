@@ -11,7 +11,28 @@ export default {
     extend: {
             backgroundImage: {
         'hero-section': "url('../src/assets/img/hero_section_banner.webp')",
-        'dol':"url('./a.jpg')"
+        'bg-top-navbar': ' linear-gradient(270deg,#191e2b 0,#333b54 52.08%,#141822 100%)',
+        'hamberger-menu': 'linear-gradient(270deg,#23293b 0,#333b54 52.08%,#23293b 100%)',
+        'bg-meshki': 'linear-gradient(#000)',
+         // Home News Bg
+        'bg-news-1': "url('../src/assets/img/hero_section_banner.webp')",
+        'bg-news-2': "url('../src/assets/img/news/2.webp')",
+        'bg-news-3': "url('../src/assets/img/news/3.jpg')",
+        'bg-news-4': "url('../src/assets/img/news/4.png')",
+        'bg-news-5': "url('../src/assets/img/news/5.jpg')",
+        'bg-news-6': "url('../src/assets/img/news/6.jpg')",
+
+        
+      },
+      gridTemplateColumns: {
+        'footer-1': 'repeat(1, 1fr)',
+        'footer-2': 'repeat(2, 1fr)',
+        'footer-3': 'repeat(3, 1fr)',
+        'footer-4': 'repeat(4, 1fr)',
+      },
+      screens: {
+        'xs': '400px',
+        'xxs':'520px'
       },
       fontFamily: {
           'titilium':['Titillium  Web','sans-serif']
@@ -23,6 +44,7 @@ export default {
         'primary_color2': '#dcbc78',
         'footer_color':'#151621'
       },
+
     },
   },
   plugins: [],
