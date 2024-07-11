@@ -1,11 +1,6 @@
 <template>
 
-    <header class="px-2  font-titilium text-4xl text-center 
-       bg-navbar_bg duration-300 ease-in
-        relative  bg-bg-top-navbar sm:bg-none  sm:hover:bg-navbar_bg
-        sm:fixed sm:top-0 sm:left-0 sm:w-full
-        lg:py-3
-        z-[1001] 
+    <header class="header
     
     " ref="headerx" @mouseover="mouseOverNavbar()" @mouseleave="mouseLeavesNavbar()" >
      <div class="top-nav flex  items-end justify-between py-2 px-2  md:px-10 lg:container  ">
@@ -31,16 +26,15 @@
        </div>
 
 
-        <div class="right-side flex items-center gap-5 ">
+        <div class="right-side flex-icenter gap-5 ">
             
-         <div class="official-shop flex items-center relative">
-            <a href="#" class=" uppercase text-sm
-             text-white hover:text-primary_color2  font-semibold 
-              hover:bg-transparent border-2 border-primary_color2 py-3 px-[.45rem] tracking-[.14rem] ">
+         <div class="official-shop flex-icenter relative">
+            <a href="#" class=" gold_button"
+              >
               OG OFFICIAL SHOP</a>
          </div>
 
-          <div class="lg:hidden hamberger-menu    flex items-center  text-xl  px-2 py-1  text-white  "@click="toggleMenu()"  ref="hamberger_menu_icon">
+          <div class="lg:hidden hamberger-menu    flex-icenter text-xl  px-2 py-1  text-white  "@click="toggleMenu()"  ref="hamberger_menu_icon">
             <button class="" >
               ☰
                <!-- X -->
@@ -51,9 +45,9 @@
 
     </header>
     <!-- HamberGerMenu Mobile -->
-    <div class="hamberger-mobile-menu-list  z-[1000] absolute sm:top-[42px]  sm:fixed top-[50px] md:top-[55px]  lg:hidden w-full text-white text-xs bg-hamberger-menu pt-3 sm:pt-8 md:pt-8" v-if="menu_active">
+    <div class="hamberger-mobile-menu-list  " v-if="menu_active">
 <nav>
-  <ul class="uppercase tracking-wider flex items-center flex-col gap-7 justify-center w-full py-4">
+  <ul class="uppercase tracking-wider flex- flex-col gap-7 justify-center w-full py-4">
 <li class="w-full relative   text-center" v-for="(item,index) in menuListItems" :key="index" >
   <a :href="item.link" class="">{{ item.name }}</a>
 </li>
@@ -89,7 +83,7 @@ const toggleMenu = () => {
 
 const headerx = ref('')
 
-const dostuff = () => {
+const navbarReact = () => {
   if (menu_active.value === false) {
     if (window.scrollY === 0) {
         headerx.value.classList.add('transparented')
@@ -113,8 +107,8 @@ const mouseLeavesNavbar = () => {
 }
 
 onMounted(() => {
-  dostuff()
-  window.addEventListener('scroll', dostuff)
+  navbarReact()
+  window.addEventListener('scroll', navbarReact)
 })
 
 

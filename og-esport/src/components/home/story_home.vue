@@ -1,15 +1,13 @@
 <template>
   <div class="xl:container px-4 sm:px-6 md:px-8 lg:px-12 ">
-    <h3 class="text-white text-2xl tracking-widest my-6 hover:text-white/90 "><a href="#">Our Story</a></h3>
-
+    <h3 class=" text-white font-semibold text-xl tracking-[.3rem] my-6 hover:text-white/90 uppercase px-4 sm:px-6 md:px-8 lg:px-10"><a href="#">Our Story</a></h3>
+<!-- text-white text-2xl tracking-widest my-6 hover:text-white/90 -->
       <swiper
     slides-per-view="1"
     :breakpoints="{ 450:{ slidesPerView:1 }, 720:{slidesPerView:2}, 1025:{ slidesPerView:3, } }"
     space-between="20"
     loop="true"
     Autoplay
-   
-    
 
   >
     <swiper-slide class="group " 

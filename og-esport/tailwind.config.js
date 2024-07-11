@@ -44,6 +44,11 @@ export default {
         'primary_color2': '#dcbc78',
         'footer_color':'#151621'
       },
+      zIndex: {
+        '1001': '1001',
+        '1000': '1000',
+        '100':'100'
+      }
 
     },
   },
