@@ -11,3 +11,24 @@
     font-family: 'Titillium  Web',sans-serif;
   }
 }
+
+@layer components {
+  .header {
+    @apply px-2  font-titilium text-4xl text-center 
+       bg-navbar_bg duration-300 ease-in
+        relative  bg-bg-top-navbar sm:bg-none  sm:hover:bg-navbar_bg
+        sm:fixed sm:top-0 sm:left-0 sm:w-full
+        lg:py-3
+        z-[1001] 
+  }
+
+  .footer-headings{
+    @apply uppercase py-3 text-xl lg:text-2xl tracking-widest
+  }
+  .sub-menu-footer{
+    @apply flex flex-col text-sm lg:text-base gap-[.6rem]
+  }
+  .footer-info{
+    @apply grid-cols-footer-1 sm:grid-cols-footer-2   lg:grid-cols-footer-4  xs:place-items-center sm:place-items-baseline  w-full gap-12 pt-8 pb-6
+  }
+}

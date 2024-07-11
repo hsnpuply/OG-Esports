@@ -4,6 +4,8 @@ import Hero_Banner_Section from '../src/components/home/home_hero_section.vue';
 import Home_main from '../src/components/home/main_home.vue';
 import Footer from '../src/components/footer.vue';
 
+import arrowUp from '../src/assets/img/icon-arrow-up.png'
+
 import {  ref,onMounted } from 'vue'
 
 const scroll_top = ref('')
@@ -43,8 +45,8 @@ onMounted(() => {
             <p class="hidden xl:block 2xl:hidden">Xl</p>
             <p class="hidden 2xl:block">2XL</p>
         </div>
-        <div class="scroll_top " ref="scroll_top" @click="goToTop()">
-            <p class="select-none">∟</p>
+        <div class="scroll_top flex items-center justify-center bg-navbar_bg border-2 border-primary_color2 " ref="scroll_top" @click="goToTop()">
+            <img width="28" height="28" :src="arrowUp" class="select-none rotate-[-45deg]"/>
         </div>
 
     </div>
@@ -54,21 +56,24 @@ onMounted(() => {
 <style scoped>
 .scroll_top{
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     right: -100px;
-    background-color: #2af;
-    padding: 1rem 1.4rem;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    transform: rotate(45deg);
     z-index: 1000;
     cursor: pointer;
     font-size: 1.5rem;
 }
 .morad{
-    right: 20px;
-    transition: all .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    right: 30px;
+    transition: all .7s ease-in-out;
+    opacity: 1;
 }
 .hideScroll{
     right: -100px;
+    opacity: 0;
 
 }
 </style>

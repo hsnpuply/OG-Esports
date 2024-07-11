@@ -2,7 +2,7 @@
     <div class="partners_home relative container ">
             <ul  class="flex items-center flex-wrap gap-8 justify-center lg:gap-x-20 md:gap-x-10 xl:gap-x-28 ">
                 <li v-for="(partner,index) in partners" :key="index">
-                        <a :href="partner.link">
+                        <a :href="partner.link" target="_blank">
                         <img :src="partner.image" alt="" class="w-28 lg:w-32 xl:w-36">
                     </a>        
                 </li>
@@ -23,7 +23,7 @@ import {ref} from 'vue';
 const partners = ref([
     {
     id:0,
-        image: Redbull,
+     image: Redbull,
     link:'https://redbull.com'
   }, 
   {

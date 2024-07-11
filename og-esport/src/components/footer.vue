@@ -7,12 +7,12 @@
                       </a>
                 </div>
 
-                <div class="footer-info grid-cols-footer-1 sm:grid-cols-footer-2   lg:grid-cols-footer-4  xs:place-items-center sm:place-items-baseline  w-full gap-12 pt-8 pb-6 ">
+                <div class="footer-info  ">
 
        <!-- About -->
                     <div class="about-footer">
-                      <h2 class="uppercase py-3 text-xl lg:text-2xl tracking-widest">About</h2>
-                      <div class="about-menu flex flex-col text-sm lg:text-base gap-[.6rem] ">
+                      <h2 class="footer-headings">About</h2>
+                      <div class="about-menu sub-menu-footer ">
                         <a href="#" class="footer-link">News</a>
                         <a href="#" class="footer-link">About Us</a>
                         <a href="#" class="footer-link">Partners</a>
@@ -22,15 +22,15 @@
 
                   <!-- Teams -->
                   <div class="teams-footer">
-                    <h2 class="uppercase py-3 text-xl lg:text-2xl tracking-widest">Teams</h2>
-                    <div class="teams-menu flex flex-col text-sm lg:text-base gap-[.6rem]">
+                    <h2 class="footer-headings">Teams</h2>
+                    <div class="teams-menu sub-menu-footer">
                         <a href="#" class="footer-link">Dota 2</a>
                         <a href="#" class="footer-link">CS 2</a>
                         <a href="#" class="footer-link">Rocket League</a>
                     </div>
                   </div>
                   <div class="other-footer">
-                  <h2 class="uppercase py-3 text-xl lg:text-2xl tracking-widest">Other</h2>
+                  <h2 class="footer-headings">Other</h2>
                     <div class="other-menu flex flex-col  text-sm lg:text-base gap-[.6rem]">
                         <a href="#" class="footer-link">Policy</a>
                         <a href="#" class="footer-link">Store</a>
