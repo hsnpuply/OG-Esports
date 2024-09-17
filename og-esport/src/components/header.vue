@@ -47,7 +47,7 @@
     <!-- HamberGerMenu Mobile -->
     <div class="hamberger-mobile-menu-list  " v-if="menu_active">
 <nav>
-  <ul class="uppercase tracking-wider flex- flex-col gap-7 justify-center w-full py-4">
+  <ul class="uppercase tracking-wider flex flex-col gap-7 justify-center w-full py-4">
 <li class="w-full relative   text-center" v-for="(item,index) in menuListItems" :key="index" >
   <a :href="item.link" class="">{{ item.name }}</a>
 </li>

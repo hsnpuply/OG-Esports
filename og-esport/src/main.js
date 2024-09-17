@@ -4,6 +4,10 @@ import App from './App.vue'
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
+import router from './index.js'
+
+
+
 
 
 /* import the fontawesome core */
@@ -18,4 +22,4 @@ import {  faTelevision } from '@fortawesome/free-solid-svg-icons'
 /* add icons to the library */
 library.add(faTelevision)
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+createApp(App).component('font-awesome-icon', FontAwesomeIcon). use(router).mount('#app')
