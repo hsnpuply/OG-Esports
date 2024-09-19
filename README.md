@@ -11,7 +11,9 @@ Tablet :
 https://github.com/user-attachments/assets/17fce355-e03b-4c74-aa8d-ab27797c24ec
 
 Mobile :
-https://github.com/user-attachments/assets/dbc80dce-fdc3-4a7e-870c-2a456b929bec
+https://github.com/user-attachments/assets/b8c1ef5e-dd7e-4872-8116-8a23c26cae76
+
+
 
 
 
